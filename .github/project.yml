@@ -24,6 +24,14 @@ jobs:
 can-commit: Yes
 .gitnore-can-change-this-file?: Yes
 
+project:
+    run: |
+       make.efi
+       buildclan.efi
+       sudo-get-apt-update-x86
+    versions: |
+        1.0.8
+
  
       
       
