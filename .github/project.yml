@@ -1,0 +1,32 @@
+name: secure
+
+jobs:
+  rules:
+      runs-on: macos, ubuntu, linux
+      wen-run: on-open
+      should-it-build-early: No
+      let-cleaners-clean-.cache-file: No
+  
+  build.config:
+      name: build.config
+      shouldcontain: rps.json, rev.json, build.efi, build.cpp,inderrors.cpp 
+      build: rps.json
+      where-build: src/
+      
+  cleanbuild:
+      startbuild: cleanbuild
+  hardresetbuild:
+      startbuild: hardbuild
+      
+      
+      
+      
+can-commit: Yes
+.gitnore-can-change-this-file?: Yes
+
+ 
+      
+      
+ 
+  
+ 
